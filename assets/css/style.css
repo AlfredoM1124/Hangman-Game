@@ -1,0 +1,17 @@
+#underline1, #underline2, #underline3, 
+#underline4, #underline5, #underline6, 
+#underline7, #underline8, #underline9, 
+#underline10, #underline11, #underline12, 
+#underline13, #underline14, #underline15 {
+	display: none;
+	float: left;
+	width: 50px;
+	height: 60px;
+	margin-right: 5px;
+}
+#wordWrap{
+            display: inline-block;
+            width: 470px;
+            margin: 0 auto;
+            padding: 0px;
+}
