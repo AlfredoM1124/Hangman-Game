@@ -1,70 +1,98 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Hangman Game</title>
-	<link rel="stylesheet" type="text/css" src="assets/css/style.css">
-	<link type="text/javascript" src="assets/javascript/game.js">
-</head>
-<body>
+    <head>
+        
+        <title>Hangman Game</title>
+        <!-- Reset Link -->
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="container mainCont text-center">
+            
+            <!-- Words banner -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <img class="BannerPics" src="assets/images/All.The.Words.jpg">
+                    <img class="BannerPics" src="assets/images/wordswordswords.jpg">
+                </div>
+            </div>
+            
+            <!-- Hangman current info box -->
+            <div class="row">
+                <div class="col-lg-8 text-center" id="hangman-info-box" style= "float: right; margin-top: 15px;">
+                    
+                     <h1> Guess the hidden words </h1>
+                     <h3>Don't get too many wrong or you'll hang for it!</h3>
+                     <br>
+                    
+                     <!-- Scoreboard -->
+                     <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                           <h3 style="color: green; display: inline;">Wins: </h3><h3 id="wins">0</h3>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                           <h3 style="color: red; display: inline;">Losses: </h3><h3 id="losses">0</h3>
+                        </div>
+                     </div>
+                     
+                     <br>
+                    
+                        <!-- Current Word-->
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h2 class="sub-header">Current Word:</h2>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                           <div class="col-lg-12 col-md-12">
+                              <h2 class="to-fill" id="current-word" style="letter-spacing: 8px;"></h2>
+                           </div>
+                        </div>
+                    
+                        <!-- This is a custom separator -->
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-style: solid; border-color: #282828; border-width: 1px;">
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8">
+                                <h3 class="statLabels">Guesses Remaining:</h3>
+                            </div>
+                            <div class="col-lg-6 col-md-4">
+                                <h3 id="guesses-left" class="statLabels">9</h3>
+                            </div>
+                        </div>
+                        
+                        <!-- Attempts label -->
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h3 class="statLabels">Wrong Guesses: </h3>
+                            </div>
+                        </div>
+                        
+                        <!-- List of attempts -->
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h2 class="to-fill" id="used-letters"></h2>
+                            </div>
+                        </div>
 
-	<h1>HANGMAN!</h1>
-		<br>
-	<h2>Guess the word before you run out of attempts, or get hung like the rest!</h2>
+                </div>
 
-	<div>
-		<h3>Wins:</h3><h3 id="wins">0</h3>
-		<h3>Losses:</h3><h3 id="losses">0</h3>
-		<h3>Guesses Remaining:</h3><h3 id="guessR">8</h3>
-		<h3>Previous Guesses:</h3><h3 id="pGuess"></h3>
-	</div>
-	<div id="gamePage">
-        <p id="categoryName"></p>
-        <div id="wordWrap">
-            <div id="underline1">
-                <div id="letter1"></div>
+                <div class="col-lg-4 text-center" style="padding-top:20px;">
+                    <img src="assets/images/BusWords.png" style="max-height: 350px;">
+                </div>
+                
             </div>
-            <div id="underline2">
-                <div id="letter2"></div>
-            </div>
-            <div id="underline3">
-                <div id="letter3"></div>
-            </div>
-            <div id="underline4">
-                <div id="letter4"></div>
-            </div>
-            <div id="underline5">
-                <div id="letter5"></div>
-            </div>
-            <div id="underline6">
-                <div id="letter6"></div>
-            </div>
-            <div id="underline7">
-                <div id="letter7"></div>
-            </div>
-            <div id="underline8">
-                <div id="letter8"></div>
-            </div>
-            <div id="underline9">
-                <div id="letter9"></div>
-            </div>
-            <div id="underline10">
-                <div id="letter10"></div>
-            </div>
-            <div id="underline11">
-                <div id="letter11"></div>
-            </div>
-            <div id="underline12">
-                <div id="letter12"></div>
-            </div>
-            <div id="underline13">
-                <div id="letter13"></div>
-            </div>
-            <div id="underline14">
-                <div id="letter14"></div>
-            </div>
-            <div id="underline15">
-                <div id="letter15"></div>
-            </div>
-</body>
+            
+        </div>
+    
+        <script src="assets/javascript/game.js"></script>
+    </body>
 </html>
