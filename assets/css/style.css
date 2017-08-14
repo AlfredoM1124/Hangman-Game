@@ -19,7 +19,7 @@ h1 {
   display: inline;
 }
 .statLabels {
-  color: black;
+  color: #4B0082;
   font-family: cursive;
 }
 .sub-header {
@@ -29,15 +29,10 @@ h1 {
 .to-fill {
     color: black;
 }
-
 .mainCont {
     
 }
 
-#hangman-info-box {
-    border-style: solid;
-    border-color: #282828;
-}
 /*------------------------------------------
   Responsive Grid Media Queries - 1280, 1024, 768, 480
    1280-1024   - desktop (default grid)

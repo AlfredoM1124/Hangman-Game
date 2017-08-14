@@ -1,5 +1,4 @@
-
-/* game.js javascript file */
+// Creating Variables
 
 var wordsArray = ["Jetpack","Gorilla","Mongolian","Historical","Theater","Festival","Partying","Glasses",
 				"Touchdown","Canal","Tabletop","Military","Jackpot","Scuba","Hydroelectricity","Words","Keys"];
@@ -34,14 +33,13 @@ var currentProgress = randomWord.innerHTML;
             
              if((wordsArray.indexOf(attempts) >= 0)){
                  var currentGuess = "";
+
                  console.log("Alert Alert Alert Alert");
-                 for(var i=0 ; i < wordsArray.length; i++){
+                 for(var i = 0; i < wordsArray.length; i++){
                      if(wordsArray.charAt(i) === attempts){
                          console.log("Found " + attempts + " at index: " + i);
                          Correctguesses++;
-                         currentWord[i] = attempts;
-                         
-                         console.log("Progress: " + currentWord);
+                         currentWord[i] = attempts;                        
                      }
                  }
                  currentWord.forEach(function(thing){
